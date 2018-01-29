@@ -4,13 +4,14 @@
 
 #PROBLEM 1 (2pts)
 #Use {}.format() to print 0.000321192 in scientific notation to two decimals
+print("{:.2e}".format(0.000321192))
 
 
 
 #PROBLEM 2 (2pts)
 #You get 8 out of 9 on a quiz.
 #Print 8/9 using {}.format() so that it appears as 88.9%
-
+print("{:.1%}".format(8/9))
 
 
 #PROBLEM 3 (3pts)
@@ -30,6 +31,9 @@ print("High score: " + str(highscore) )
 #High score:  1,023,407
 #Make sure the print formatting works for any integer from zero to nine million. Do not use any plus sign (+) in your code. 
 #You should only have two double quotes in each print statement.
+
+print("Score: {:,}".format(score))
+print("High score: {:,}".format(highscore))
 
 
 
