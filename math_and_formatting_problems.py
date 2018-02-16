@@ -32,8 +32,7 @@ print("High score: " + str(highscore) )
 #Make sure the print formatting works for any integer from zero to nine million. Do not use any plus sign (+) in your code. 
 #You should only have two double quotes in each print statement.
 
-print("Score: {:,}".format(score))
-print("High score: {:,}".format(highscore))
+
 
 
 
@@ -61,6 +60,9 @@ print("High score: {:,}".format(highscore))
 #1/19 = 0.0526
 #1/20 = 0.05
 
+for i in range(1, 21):
+  print("{:.4}".format(1 / i))
+
 
 for i in range(1, 20):
   print(i) # in case you forgot how to use a loop, here's a start
@@ -75,7 +77,7 @@ for i in range(1, 20):
 
 
 x = 12.83
-your_answer = 0  # Substitute your equation for the zero
+your_answer = 3 * ((60 * (x ** 2)) + ((3 * x) / 9)) + ((2 * x) - ((4 / 3) * x)) - x ** - 2  # Substitute your equation for the zero
 print(your_answer)
 
 
@@ -127,4 +129,14 @@ print( "a =", a, "and b =", b)
 # then the maximum number of dimes that fit in the remainder after you subtract the dollars and quarters,
 # and so on for nickels and pennies.
 # The result is that you express the amount as the minimum number of coins needed.
+
+count = 1.68 * 100
+dollar = count // 100
+quarter = (count - dollar * 100) // 25
+dime = (count - dollar * 100 - quarter * 25) // 10
+nickel = (count - dollar * 100 - quarter * 25 - dime * 10) // 5
+pennie = (count - dollar * 100  - quarter * 25 - dime * 10 - nickel * 5) // 1
+
+print("{} dollar \n{} quarter \n{} dime \n{} nickel \n{} pennie".format(dollar, quarter, dime, nickel, pennie))
+
 

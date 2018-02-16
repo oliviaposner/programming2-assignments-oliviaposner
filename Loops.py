@@ -46,7 +46,7 @@ for i in range(10):
 # then you do the ELSE statement
 
 for i in range(10):
-    n = random.radnrange(10)
+    n = random.randrange(10)
     if n == 0:
         break
 else:
