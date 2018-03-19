@@ -45,6 +45,10 @@ for i in range(2000):
             success += 1
             print("\n", roll1, "\n", roll2, "\n", roll3, "\n", roll4, "\n", roll5)
 
+print("Success = {}".format(success))
+probability = success / 2000
+print("Probability = {:.2f}%".format(probability * 100))
+
 
 # PROBLEM 3 (Number Puzzler - 6pts)
 # A, B, C, and D are all different digits.

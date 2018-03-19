@@ -63,13 +63,6 @@ print("High score: " + str(highscore) )
 for i in range(1, 21):
   print("{:.4}".format(1 / i))
 
-
-for i in range(1, 20):
-  print(i) # in case you forgot how to use a loop, here's a start
-
-
-
-
 #PROBLEM 5 (From Math Class to Code - 5pts)
 # Print the answer to the math question:
 # 3(60x^2 + 3x/9) + 2x - 4/3(x) - sqrt(x)
@@ -86,7 +79,9 @@ print(your_answer)
 #Shipping costs $4 for the first copy and 75 cents for each additional copy.
 # Calculate the total wholesale costs for 68 copies formatted (using {}.format()) to the nearest penny.
 
-
+price = 27.95
+cost = ((((price / 2) + .75) * 68) + 4)
+print("{:.2f}".format(cost))
 
 
 #PROBLEM 3 (What is this, the ACT? - 5pts)
@@ -95,11 +90,12 @@ print(your_answer)
 # Make a program that prints the amount to the nearest penny using the variables below
 # Use the round(float, digits) function to get to nearest penny.
 
-chair_price = 189.99
+chair = 189.99
 tax_percent = 0.095
 units = 8
 
-
+price = (units * chair) + ((units * chair) * tax_percent)
+print(round(price, 2))
 
 
 ##PROBLEM 4 (Variable Swap Logic Problem- 2pts)
@@ -115,7 +111,9 @@ b = 23
 print( "a =", a, "and b =", b)
 a += b # this is the first line to help you out
 # add two more lines of code here to cause swapping of a and b
-print( "a =", a, "and b =", b)
+print("a =", a, "and b =", b)
+b = a - b
+a = a - b
 
 
 
