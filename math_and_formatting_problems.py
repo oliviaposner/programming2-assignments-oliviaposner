@@ -4,13 +4,14 @@
 
 #PROBLEM 1 (2pts)
 #Use {}.format() to print 0.000321192 in scientific notation to two decimals
+print("{:.2e}".format(0.000321192))
 
 
 
 #PROBLEM 2 (2pts)
 #You get 8 out of 9 on a quiz.
 #Print 8/9 using {}.format() so that it appears as 88.9%
-
+print("{:.1%}".format(8/9))
 
 
 #PROBLEM 3 (3pts)
@@ -30,6 +31,8 @@ print("High score: " + str(highscore) )
 #High score:  1,023,407
 #Make sure the print formatting works for any integer from zero to nine million. Do not use any plus sign (+) in your code. 
 #You should only have two double quotes in each print statement.
+
+
 
 
 
@@ -57,12 +60,8 @@ print("High score: " + str(highscore) )
 #1/19 = 0.0526
 #1/20 = 0.05
 
-
-for i in range(1, 20):
-  print(i) # in case you forgot how to use a loop, here's a start
-
-
-
+for i in range(1, 21):
+  print("{:.4}".format(1 / i))
 
 #PROBLEM 5 (From Math Class to Code - 5pts)
 # Print the answer to the math question:
@@ -71,7 +70,7 @@ for i in range(1, 20):
 
 
 x = 12.83
-your_answer = 0  # Substitute your equation for the zero
+your_answer = 3 * ((60 * (x ** 2)) + ((3 * x) / 9)) + ((2 * x) - ((4 / 3) * x)) - x ** - 2  # Substitute your equation for the zero
 print(your_answer)
 
 
@@ -80,7 +79,9 @@ print(your_answer)
 #Shipping costs $4 for the first copy and 75 cents for each additional copy.
 # Calculate the total wholesale costs for 68 copies formatted (using {}.format()) to the nearest penny.
 
-
+price = 27.95
+cost = ((((price / 2) + .75) * 68) + 4)
+print("{:.2f}".format(cost))
 
 
 #PROBLEM 3 (What is this, the ACT? - 5pts)
@@ -89,11 +90,12 @@ print(your_answer)
 # Make a program that prints the amount to the nearest penny using the variables below
 # Use the round(float, digits) function to get to nearest penny.
 
-chair_price = 189.99
+chair = 189.99
 tax_percent = 0.095
 units = 8
 
-
+price = (units * chair) + ((units * chair) * tax_percent)
+print(round(price, 2))
 
 
 ##PROBLEM 4 (Variable Swap Logic Problem- 2pts)
@@ -109,7 +111,9 @@ b = 23
 print( "a =", a, "and b =", b)
 a += b # this is the first line to help you out
 # add two more lines of code here to cause swapping of a and b
-print( "a =", a, "and b =", b)
+print("a =", a, "and b =", b)
+b = a - b
+a = a - b
 
 
 
@@ -123,4 +127,14 @@ print( "a =", a, "and b =", b)
 # then the maximum number of dimes that fit in the remainder after you subtract the dollars and quarters,
 # and so on for nickels and pennies.
 # The result is that you express the amount as the minimum number of coins needed.
+
+count = 1.68 * 100
+dollar = count // 100
+quarter = (count - dollar * 100) // 25
+dime = (count - dollar * 100 - quarter * 25) // 10
+nickel = (count - dollar * 100 - quarter * 25 - dime * 10) // 5
+pennie = (count - dollar * 100  - quarter * 25 - dime * 10 - nickel * 5) // 1
+
+print("{} dollar \n{} quarter \n{} dime \n{} nickel \n{} pennie".format(dollar, quarter, dime, nickel, pennie))
+
 
